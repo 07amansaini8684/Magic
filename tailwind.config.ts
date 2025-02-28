@@ -1,14 +1,18 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        custom: ['Magic', 'sans-serif'],
-      },
-    },
-  },
-  plugins: [],
-}
-
-export default config
+// /** @type {import('tailwindcss').Config} */
+// export default {
+//     theme: {
+//         extend: {
+//             keyframes: {
+//                 'border-spin': {
+//                     '100%': {
+//                         transform: 'rotate(-360deg)',
+//                     },
+//                 },
+//             },
+//             animation: {
+//                 'border-spin': 'border-spin 7s linear infinite',
+//             },
+//         },
+//     },
+//     plugins: [],
+// }
