@@ -4,6 +4,7 @@ import ParticlesBackground from './components/ParticleBackground'
 import Hero from './sections/Hero'
 import  Footer  from './components/Footer'
 import Pricing from './sections/Pricing'
+import Marquee from './sections/InfinteScroll'
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
          <ParticlesBackground />
      </div>
         <Pricing/>
-
+        <Marquee/>
      <Footer/>
     </div>
   )

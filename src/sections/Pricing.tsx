@@ -1,75 +1,44 @@
 import { useState } from 'react';
 import { FaCheck } from "react-icons/fa6";
+import { pricingPlans, companies } from '../constant';
 
-type PlanFeature = {
-    text: string;
-};
-
-type PricingPlan = {
-    title: string;
-    description: string;
-    price: number;
-    features: PlanFeature[];
-};
 
 const Pricing = () => {
     const [isAnnual, setIsAnnual] = useState<boolean>(true);
 
-    const pricingPlans: PricingPlan[] = [
-        {
-            title: "Basic",
-            description: "A basic plan for startups and individual users",
-            price: 10,
-            features: [
-                { text: "AI-powered analytics" },
-                { text: "Basic support" },
-                { text: "5 projects limit" },
-                { text: "Access to basic AI tools" }
-            ]
-        },
-        {
-            title: "Premium",
-            description: "A premium plan for growing businesses",
-            price: 20,
-            features: [
-                { text: "Advanced AI insights" },
-                { text: "Priority support" },
-                { text: "Unlimited projects" },
-                { text: "Access to all AI tools" },
-                { text: "Custom integrations" }
-            ]
-        },
-        {
-            title: "Enterprise",
-            description: "An enterprise plan with advanced features for large organizations",
-            price: 50,
-            features: [
-                { text: "Custom AI solutions" },
-                { text: "24/7 dedicated support" },
-                { text: "Unlimited projects" },
-                { text: "Access to all AI tools" },
-                { text: "Custom integrations" },
-                { text: "Data security and compliance" }
-            ]
-        },
-        {
-            title: "Ultimate",
-            description: "The ultimate plan with all features for industry leaders",
-            price: 80,
-            features: [
-                { text: "Bespoke AI development" },
-                { text: "White-glove support" },
-                { text: "Unlimited projects" },
-                { text: "Priority access to new AI tools" },
-                { text: "Custom integrations" },
-                { text: "Highest data security and compliance" }
-            ]
-        }
-    ];
-
     return (
         <div className="relative z-10 w-full flex flex-col items-center justify-center">
-            <div className=" w-full h-full max-w-7xl text-white bg-black">
+            <div className=" w-full h-full flex flex-col items-center justify-center max-w-7xl text-white bg-black">
+                <div className="w-full bg-black py-12">
+                    <div className="container mx-auto px-4">
+                        <h2 className="text-center text-gray-600 text-sm uppercase font-semibold tracking-wider mb-4">
+                            TRUSTED BY TEAMS FROM AROUND THE WORLD
+                        </h2>
+                        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20">
+                            {Array.isArray(companies) &&
+                                companies.map((company) =>
+                                    company.name === "Uber" ? (
+                                        <div key={company.name} className="w-12">
+                                            <img
+                                                src={company.logo}
+                                                alt={company.name}
+                                                className="w-full h-auto filter brightness-0 invert"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div key={company.name} className="w-20">
+                                            <img
+                                                src={company.logo}
+                                                alt={company.name}
+                                                className="w-full h-auto filter brightness-0 invert"
+                                            />
+                                        </div>
+                                    )
+                                )}
+                        </div>
+                    </div>
+                </div>
+
                 <div className="py-24 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto text-center">
                         <h2 className="text-2xl font-bold">Pricing</h2>
@@ -120,14 +89,14 @@ const Pricing = () => {
                                     </button>
 
                                     <div
-                                        className="w-full mt-8 h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent"/>
+                                        className="w-full mt-8 h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
 
                                     <div className="mt-8 space-y-1">
                                         {plan.features.map((feature, idx) => (
                                             <div key={idx} className="flex items-center">
                                                 <div
                                                     className="flex-shrink-0 h-5 w-5 text-white rounded-full bg-[#4ADF81] mt-1 mr-3 flex items-center justify-center">
-                                                    <FaCheck className="h-3 w-3"/>
+                                                    <FaCheck className="h-3 w-3" />
                                                 </div>
                                                 <p className="text-xs">{feature.text}</p>
                                             </div>

@@ -19,8 +19,8 @@ const Footer: React.FC = () => {
     ];
 
     return (
-        <footer className="bg-black text-white w-full max-w-7xl relative z-10 p-6">
-            <div className="container mx-auto">
+        <footer className="bg-black text-white w-full mt-10 relative z-10 p-6 pt-20 ">
+            <div className="container mx-auto max-w-7xl">
                 <div className="flex flex-col md:flex-row justify-between items-start mb-8">
                     {/* Logo and tagline section */}
                     <div className="mb-6 md:mb-0">
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                 </div>
 
                 {/* Footer bottom with copyright and icons */}
-                <div className="flex flex-col md:flex-row-reverse justify-between items-center pt-4 border-t border-gray-800">
+                <div className="flex flex-col md:flex-row-reverse justify-between items-center pt-4 border-t border-gray-950 mt-10">
                     <p className="text-sm text-gray-400 mb-4 md:mb-0">
                         Copyright © 2024 Magic UI. All Rights Reserved.
                     </p>
