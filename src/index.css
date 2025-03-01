@@ -98,3 +98,11 @@ body, html{
   border-radius: 10px;
   box-shadow: inset 2px 2px 2px rgba(185, 185, 185, 0.8),
 }
+
+::-moz-selection { /* Code for Firefox */
+    background: linear-gradient(35deg, #191919 95%, #d2c8cd 100%);
+}
+
+::selection {
+    background: linear-gradient(35deg, #191919 95%, #d2c8cd 100%);
+}
