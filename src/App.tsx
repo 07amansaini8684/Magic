@@ -6,6 +6,18 @@ import  Footer  from './components/Footer'
 import Pricing from './sections/Pricing'
 import Marquee from './sections/InfinteScroll'
 
+import Lenis from '@studio-freight/lenis';
+
+const lenis = new Lenis();
+
+function raf(time: number) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+
 const App = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center">

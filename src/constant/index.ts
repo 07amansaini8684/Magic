@@ -1,3 +1,4 @@
+ 
 type PlanFeature = {
     text: string;
 };
@@ -87,3 +88,8 @@ export const companies = [
         logo: "/Notion.svg",
     }
 ]
+
+
+// marquee cards data
+
+ 

@@ -41,7 +41,7 @@ body, html{
     );
 
     @apply absolute left-[-50%] top-[-50%] h-[200%] w-[200%] content-[''];
-    animation: border-spin 8s linear infinite; /* Apply the animation */
+    animation: border-spin 6s linear infinite; /* Apply the animation */
   }
 
   /* Body */
@@ -88,3 +88,13 @@ body, html{
   }
 }
 
+/*  desiging the horizontal bar */
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(35deg, #191919 95%, #d2c8cd 100%);
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px rgba(185, 185, 185, 0.8),
+}

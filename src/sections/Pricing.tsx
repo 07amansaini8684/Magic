@@ -7,14 +7,14 @@ const Pricing = () => {
     const [isAnnual, setIsAnnual] = useState<boolean>(true);
 
     return (
-        <div className="relative z-10 w-full flex flex-col items-center justify-center">
+        <div className="relative z-10 w-full flex flex-col items-center justify-center mt-8 md:mt-18 bg-black">
             <div className=" w-full h-full flex flex-col items-center justify-center max-w-7xl text-white bg-black">
-                <div className="w-full bg-black py-12">
+                <div className="w-full py-12">
                     <div className="container mx-auto px-4">
                         <h2 className="text-center text-gray-600 text-sm uppercase font-semibold tracking-wider mb-4">
                             TRUSTED BY TEAMS FROM AROUND THE WORLD
                         </h2>
-                        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20">
+                        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20 z-50">
                             {Array.isArray(companies) &&
                                 companies.map((company) =>
                                     company.name === "Uber" ? (
@@ -36,10 +36,19 @@ const Pricing = () => {
                                     )
                                 )}
                         </div>
+
                     </div>
+
+                </div>
+                {/* bg-[radial-gradient(circle,rgba(36,28,19,1)_0%,rgba(36,28,19,1)_49%,rgba(36,28,19,0.4)_100%)] */}
+
+                <div className="w-full relative pt-12 flex items-center justify-center">
+                    {/* Radial Glow Effect */}
+                    <div className="absolute w-[60%] h-[80px] z-[5] bg-[radial-gradient(circle,rgba(161,122,75,0.6)_0%,rgba(242,172,122,0.3)_100%)] blur-[120px] bottom-[140px] rounded-full" />
+                    <div className="bg-black h-[100px] w-[70%] rounded-t-[200%] relative z-10" />
                 </div>
 
-                <div className="py-24 px-4 sm:px-6 lg:px-8">
+                <div className="py-24 px-4 sm:px-6 lg:px-8" >
                     <div className="max-w-7xl mx-auto text-center">
                         <h2 className="text-2xl font-bold">Pricing</h2>
                         <h1 className="text-6xl font-bold mt-4 mb-6">Simple pricing for everyone.</h1>
